@@ -631,7 +631,7 @@ int LoadTexture(const char *filePath, int format)
 #endif
 
             int id = 0;
-            switch (format) {
+/*            switch (format) {
                 default: break;
                 case TEXFMT_RGBA4444: {
                     ushort *pixels = (ushort *)malloc(width * height * sizeof(ushort));
@@ -678,8 +678,8 @@ int LoadTexture(const char *filePath, int format)
 
                     free(pixels);
                     break;
-                }
-                case TEXFMT_RGBA8888: {
+                } */
+//                case TEXFMT_RGBA8888: {
                     uint *pixels = (uint *)malloc(width * height * sizeof(uint));
 
                     for (int y = 0; y < height; ++y) {
@@ -702,9 +702,9 @@ int LoadTexture(const char *filePath, int format)
 #endif
 
                     free(pixels);
-                    break;
-                }
-            }
+//                    break;
+//                }
+//            }
         }
 
         CloseFile();
@@ -748,7 +748,7 @@ void ReplaceTexture(const char *filePath, int texID)
 #endif
 
             int id = 0;
-            switch (texture->format) {
+/*            switch (texture->format) {
                 default: break;
                 case TEXFMT_RGBA4444: {
                     ushort *pixels = (ushort *)malloc(width * height * sizeof(ushort));
@@ -790,8 +790,8 @@ void ReplaceTexture(const char *filePath, int texID)
 
                     free(pixels);
                     break;
-                }
-                case TEXFMT_RGBA8888: {
+                } */
+//                case TEXFMT_RGBA8888: {
                     uint *pixels = (uint *)malloc(width * height * sizeof(uint));
 
                     for (int y = 0; y < height; ++y) {
@@ -812,9 +812,9 @@ void ReplaceTexture(const char *filePath, int texID)
 #endif
 
                     free(pixels);
-                    break;
-                }
-            }
+//                    break;
+//                }
+//            }
         }
 
         CloseFile();
